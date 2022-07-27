@@ -14,12 +14,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm ci && npm run build
+      - run: npm ci && npm run build --base-href=/public/
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          build: npm run build
-          start: npm start
-          args: deploy --only hosting
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZINGMP3_38D18 }}'
           channelId: live
