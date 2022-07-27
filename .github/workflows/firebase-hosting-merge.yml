@@ -17,6 +17,6 @@ jobs:
         with:
           args: deploy --only hosting
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZINGMP3_38D18 }}'
           channelId: live
           projectId: zingmp3-38d18
